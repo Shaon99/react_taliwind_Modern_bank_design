@@ -1,8 +1,8 @@
 import { quotes } from '../assets'
 
-const FeedbackCard = ({ content, name, title, img }) => {
+const FeedbackCard = ({id, content, name, title, img }) => {
   return (
-    <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[350px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
+    <div className={`flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[350px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card ${id==='feedback-1'? "feedback-card-active":""}`}>
       <img src={quotes} alt="quote" className='w-[42px] h-[27px] object-contain' />
       <p className='font-poppins font-normal text-[18px] leading-[32px] text-white my-10'>{content}</p>
       <div className='flex flex-row'>
